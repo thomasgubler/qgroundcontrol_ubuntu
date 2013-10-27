@@ -1,1 +1,5 @@
-TEST package
+qgroundcontrol; urgency=low
+
+  * Test version for ubuntu
+  
+ -- XYZ <XYZ@XYZ.org>  Sun, 27 Oct 2013 21:43:30 -0100
