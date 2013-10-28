@@ -1,2 +1,2 @@
-#! /usr/bin/qmake-qt4 -f
-#! /usr/bin/make -f
+#! /usr/bin/qmake-qt4
+#! /usr/bin/make
