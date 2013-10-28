@@ -1,5 +1,5 @@
-qgroundcontrol (2.0) saucy; urgency=low
+qgroundcontrol (2.0-1) unstable; urgency=low
 
-  * Test version for ubuntu
-  
- -- XYZ <XYZ@XYZ.org>  Sun, 27 Oct 2013 21:43:30 -0100
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Thomas Gubler <thomasgubler@gmail.com>  Mon, 28 Oct 2013 21:12:59 +0100
