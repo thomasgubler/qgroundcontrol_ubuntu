@@ -10,17 +10,18 @@
 #export DH_VERBOSE=1
  
 build:
-    qmake-qt4
-    make
- 
+	qmake-qt4
+	make
+
+
 binary:
-    dh_testroot
-    dh_auto_install
-    dh_shlibdeps
-    dh_installdeb
-    dh_gencontrol
-    dh_md5sums
-    dh_builddeb
+	dh_testroot
+	dh_auto_install
+	dh_shlibdeps
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
  
 %:
-    dh $@
+	dh $@
