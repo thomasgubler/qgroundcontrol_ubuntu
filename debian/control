@@ -2,10 +2,10 @@ Source: qgroundcontrol
 Section: Network
 Priority: optional
 Maintainer: xyz
-Build-Depends: libphonon-dev libopenscenegraph-dev libqt4-dev build-essential libopenscenegraph-dev flite1-dev libsdl1.2-dev 
+Build-Depends: libphonon-dev, libopenscenegraph-dev, libqt4-dev, build-essential, libopenscenegraph-dev, flite1-dev, libsdl1.2-dev 
 Standards-Version: 3.7.2
 
 Package: qgroundcontrol
 Architecture: all
-Depends: libphonon4 phonon-backend-gstreamer openscenegraph phonon libflite1
+Depends: libphonon4, phonon-backend-gstreamer, openscenegraph, phonon, libflite1
 Description: Open Source Micro Air Vehicle Ground Control Station / Operator Control Unit
