@@ -1,12 +1,12 @@
 Source: qgroundcontrol
-Section: unknown
+Section: Network
 Priority: extra
 Maintainer: Thomas Gubler <thomasgubler@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), libphonon-dev, libopenscenegraph-dev, libqt4-dev, build-essential, libopenscenegraph-dev, flite1-dev, libsdl1.2-dev, libudev-dev
 Standards-Version: 3.9.4
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/qgroundcontrol.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/qgroundcontrol.git;a=summary
+Homepage: http://qgroundcontrol.org/
+#Vcs-Git: https://github.com/mavlink/qgroundcontrol.git
+#Vcs-Browser: https://github.com/mavlink/qgroundcontrol/
 
 Package: qgroundcontrol
 Architecture: any
