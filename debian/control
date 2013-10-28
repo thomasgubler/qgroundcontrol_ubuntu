@@ -1,5 +1,5 @@
 Source: qgroundcontrol
-Section: Network
+Section: network
 Priority: extra
 Maintainer: Thomas Gubler <thomasgubler@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), libphonon-dev, libopenscenegraph-dev, libqt4-dev, build-essential, libopenscenegraph-dev, flite1-dev, libsdl1.2-dev, libudev-dev
