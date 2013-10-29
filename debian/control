@@ -2,7 +2,7 @@ Source: qgroundcontrol
 Section: net
 Priority: extra
 Maintainer: Thomas Gubler <thomasgubler@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), libphonon-dev, libopenscenegraph-dev, libqt4-dev, build-essential, libopenscenegraph-dev, flite1-dev, libsdl1.2-dev, libudev-dev, libqt4-opengl-dev
+Build-Depends: debhelper (>= 8.0.0), libphonon-dev, libopenscenegraph-dev, libqt4-dev, build-essential, libopenscenegraph-dev, flite1-dev, libsdl1.2-dev, libudev-dev, libqt4-opengl-dev, libqtwebkit-dev
 Standards-Version: 3.9.4
 Homepage: http://qgroundcontrol.org/
 #Vcs-Git: https://github.com/mavlink/qgroundcontrol.git
@@ -10,5 +10,5 @@ Homepage: http://qgroundcontrol.org/
 
 Package: qgroundcontrol
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depend}, libphonon4, phonon-backend-gstreamer, openscenegraph, phonon, libflite1, libqt4-opengl
+Depends: ${shlibs:Depends}, ${misc:Depend}, libphonon4, phonon-backend-gstreamer, openscenegraph, phonon, libflite1, libqt4-opengl, libqtwebkit4
 Description: Open Source Micro Air Vehicle Ground Control Station
