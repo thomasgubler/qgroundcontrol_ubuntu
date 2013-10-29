@@ -19,5 +19,14 @@ clean:
 	qmake-qt4 qgroundcontrol.pro
 	make clean
 
-%:
-	dh $@ 
+binary-arch:
+	install
+	dh binary-arch
+
+binary-indep:
+	install
+	dh binary-indep
+
+binary:
+	binary-arch
+	binary-indep
