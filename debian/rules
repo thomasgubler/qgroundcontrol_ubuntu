@@ -9,24 +9,12 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-build:
+override_dh_clean:
 	qmake-qt4 qgroundcontrol.pro
-	make
-build-arch:
+	dh_clean
+
+override_dh_build:
 	qmake-qt4 qgroundcontrol.pro
-	make
-clean:
-	qmake-qt4 qgroundcontrol.pro
-	make clean
-
-binary-arch:
-	build
-	dh binary-arch
-
-binary-indep:
-	build
-	dh binary-indep
-
-binary:
-	binary-arch
-	binary-indep
+	dh_build
+%:
+	dh $@
