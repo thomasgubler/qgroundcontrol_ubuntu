@@ -20,11 +20,11 @@ clean:
 	make clean
 
 binary-arch:
-	install
+	build
 	dh binary-arch
 
 binary-indep:
-	install
+	build
 	dh binary-indep
 
 binary:
