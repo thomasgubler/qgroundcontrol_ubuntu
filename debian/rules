@@ -9,12 +9,5 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-override_dh_clean:
-	qmake-qt4 qgroundcontrol.pro
-	dh_clean
-
-override_dh_build:
-	qmake-qt4 qgroundcontrol.pro
-	dh_build
 %:
 	dh $@
