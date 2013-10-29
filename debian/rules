@@ -12,6 +12,9 @@
 build:
 	qmake-qt4 qgroundcontrol.pro
 	make
+build-arch:
+	qmake-qt4 qgroundcontrol.pro
+	make
 clean:
 	qmake-qt4 qgroundcontrol.pro
 	make clean
