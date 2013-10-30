@@ -10,8 +10,7 @@
 #export DH_VERBOSE=1
 
 override_dh_auto_configure:
-	qmake-qt4 qgroundcontrol.pro
-	dh_auto_configure
+	dh_auto_configure -- qgroundcontrol.pro
 
 %:
 	dh $@
