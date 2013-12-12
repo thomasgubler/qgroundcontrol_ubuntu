@@ -140,7 +140,7 @@ LinechartWidget::LinechartWidget(int systemid, QWidget *parent) : QWidget(parent
     createLayout();
 
     // And make sure we're listening for future style changes
-    connect(MainWindow::instance(), SIGNAL(styleChanged()), this, SLOT(recolor()));
+    connect(MainWindow::instance(), SIGNAL(styleChanged(MainWindow::QGC_MAINWINDOW_STYLE)), this, SLOT(recolor()));
 
     updateTimer->setInterval(updateInterval);
     connect(updateTimer, SIGNAL(timeout()), this, SLOT(refresh()));
@@ -673,9 +673,19 @@ void LinechartWidget::removeCurve(QString curve)
     widget = curveVariances->take(curve);
     curvesWidgetLayout->removeWidget(widget);
     widget->deleteLater();
-//    widget = colorIcons->take(curve);
-//    curvesWidgetLayout->removeWidget(colorIcons->take(curve));
+    widget = colorIcons.take(curve);
+    curvesWidgetLayout->removeWidget(widget);
     widget->deleteLater();
+    widget = curveNameLabels.take(curve);
+    curvesWidgetLayout->removeWidget(widget);
+    widget->deleteLater();
+    widget = curveUnits.take(curve);
+    curvesWidgetLayout->removeWidget(widget);
+    widget->deleteLater();
+    QCheckBox* checkbox;
+    checkbox = checkBoxes.take(curve);
+    curvesWidgetLayout->removeWidget(checkbox);
+    checkbox->deleteLater();
 //    intData->remove(curve);
 }
 
@@ -702,13 +712,16 @@ void LinechartWidget::setPlotFilterLineEditFocus()
 
 void LinechartWidget::filterCurve(const QString &key, bool match)
 {
-        colorIcons[key]->setVisible(match);
-        curveNameLabels[key]->setVisible(match);
-        (*curveLabels)[key]->setVisible(match);
-        (*curveMeans)[key]->setVisible(match);
-        (*curveVariances)[key]->setVisible(match);
-        curveUnits[key]->setVisible(match);
-        checkBoxes[key]->setVisible(match);
+        if (!checkBoxes[key]->isChecked())
+        {
+            colorIcons[key]->setVisible(match);
+            curveNameLabels[key]->setVisible(match);
+            (*curveLabels)[key]->setVisible(match);
+            (*curveMeans)[key]->setVisible(match);
+            (*curveVariances)[key]->setVisible(match);
+            curveUnits[key]->setVisible(match);
+            checkBoxes[key]->setVisible(match);
+        }
 }
 
 void LinechartWidget::filterCurves(const QString &filter)
